@@ -55,22 +55,26 @@ library
   other-modules:
   default-extensions: NoImplicitPrelude
                     , ImportQualifiedPost
+                    , LambdaCase
                     , OverloadedStrings
                     , PatternSynonyms
                     , ScopedTypeVariables
                     , RankNTypes
+                    , TypeApplications
                     , UnicodeSyntax
 
   -- LANGUAGE extensions used by modules in this package.
   -- other-extensions:
 
   -- Other library packages from which modules are imported.
-  build-depends: base, text
+  build-depends: base, base-unicode-symbols, network-info
 
-               , base1         >= 0.0.12.0
-               , duration      >= 1.0.1.0
-               , monaderror-io >= 1.2.6.0
-               , http-plus     >= 0.0.1.0
+               , base1            >= 0.0.12.0
+               , duration         >= 1.0.1.0
+               , http-plus        >= 0.0.1.0
+               , ip4              >= 0.0.1.0
+               , monaderror-io    >= 1.2.6.0
+               , parsec-plus-base >= 1.0.5.23
 
   -- Directories containing source files.
   hs-source-dirs:      src
